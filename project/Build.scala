@@ -27,7 +27,7 @@ object ApplicationBuild extends Build {
   .settings(inConfig(AllTests)(Defaults.testTasks): _ *)
   .settings(inConfig(SysTests)(Defaults.testTasks): _ *)
   .settings(ourSettings: _*)
-  .settings(Play20.plug : _*)
+  /*.settings(Play20.plug : _*)*/
   .settings(ourBuildInfoSettings: _*)
   .settings(net.virtualvoid.sbt.graph.Plugin.graphSettings: _*)
   .dependsOn(gitHubDeps: _*)
