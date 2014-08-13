@@ -1,0 +1,73 @@
+#play
+RUNNING_PID
+#other
+logs
+tmp
+.history
+dist
+prod-dist
+.idea
+.idea_modules
+*.iml
+*.jpg
+
+# misc files
+*.log
+
+# building
+out
+ij-out
+ant-out
+
+#python compiled?
+*.pyc
+
+# sbt
+target
+lib_managed
+src_managed
+project/boot/
+project/plugins/project/
+
+#TEST Results
+test_results/
+test-results/
+
+# IntelliJ
+*.iws
+*.iml
+.idea
+
+
+# vim
+*.swp
+
+#eclipse
+.cache
+.classpath
+.project
+.settings/
+.target/
+
+#OS X
+.DS_Store
+#H2 Db
+*.db
+
+#.NET
+*.sln.docstates.suo
+*.suo
+*.user
+bin
+obj
+*.vssscc
+*.csproj.vspscc
+*.csproj.user
+*.sou
+*.user
+ClientBin
+Bin
+Release
+*.vsmdi
+*.testsettings
+TestResults
