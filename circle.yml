@@ -1,0 +1,12 @@
+machine:
+  java:
+    version: 1.7.0_55
+deployment:
+  staging:
+    branch: master
+    heroku:
+      # appname: play-starter-kit
+      commands:
+      - git push git@heroku.com:play-starter-kit.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run ./activator dist
+          timeout: 1200000 # if your deploys take a long time, 20 mins
