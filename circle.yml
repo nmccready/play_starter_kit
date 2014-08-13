@@ -7,6 +7,9 @@ deployment:
     heroku:
       # appname: play-starter-kit
       commands:
+      - ./activator dist
+      - git add -f dist/
       - git push git@heroku.com:play-starter-kit.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run ./activator dist
-          timeout: 1200000 # if your deploys take a long time, 20 mins
+      - heroku run unzip dist/*.zip -d ./release
+      - heroku run chmod +x ./release/play_starter_kit/start
+      #     timeout: 1200000 # if your deploys take a long time, 20 mins
