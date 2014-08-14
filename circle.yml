@@ -1,6 +1,9 @@
 machine:
   java:
     version: oraclejdk7
+general:
+  artifacts:
+    - "target/universal/*.zip"
 deployment:
   staging:
     branch: master
@@ -8,9 +11,9 @@ deployment:
       # appname: play-starter-kit
     commands:
     - play dist
-    - git config --global user.email "circleci.nmccready@bs.com"
-    - git config --global user.name "circleciNem"
-    - git add -f target
-    - git commit -am "release included for deployment"
+    # - git config --global user.email "circleci.nmccready@bs.com"
+    # - git config --global user.name "circleciNem"
+    # - git add -f target
+    # - git commit -am "release included for deployment"
     - git push git@heroku.com:play-starter-kit.git $CIRCLE_SHA1:refs/heads/master --force
     #     timeout: 1200000 # if your deploys take a long time, 20 mins
